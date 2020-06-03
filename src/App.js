@@ -1,41 +1,14 @@
 import React, {Component} from 'react';
+import ContactCard from "./ContactCard"
 import './App.css';
-
-class HelloWorld extends Component{
-  render(){
-    return <h1>Hello World </h1>;
-  }
-    
-}
-
-class HelloFriend extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      name: props.name,
-    };
-
-    setTimeout(this.updateName.bind(this),2000)
-  }
-
-
-  updateName(){
-    this.setState({name: "Jeff"})
-  }
-
-  render(){
-    return <h1>Hello {this.state.name}</h1>
-  }
-}
-
 
 class App extends Component{
   render(){
     return(
-      <>
-        <HelloWorld/>
-        <HelloFriend name = "Mel" />
-      </>
-    )}
+    <>
+      <ContactCard  name="eric" mobile="234554356" work="678543267" email="john@gmail.com"/>
+    </>
+    ); 
+  }
 }
 export default App;
